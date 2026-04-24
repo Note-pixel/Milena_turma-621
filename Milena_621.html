@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal de Invetário de TI- Milena de Quadros</title>
+</head>
+<body>
+    <header id="topo">
+        <h1>Portal de Inventário e Documentação de TI </h1>
+        <p><strong>Disciplina: </strong>Informática Técnica</p>
+        <p><strong>Valor: </strong>8,0 Pontos</p>
+    </header>
+    <nav>
+        <h2>Navegação do Portal</h2>
+        <ul>
+            <li><a href="#ativos">Formulário de Ativos</a></li>
+            <li><a href="#rede">Tabela de Endereçamento</a></li>
+            <li><a href="#ajuda">Suporte Técnico</a></li>
+            <li><a href="https://www.w3.org"target="_blank">Site Oficial W3C</a></li>
+        </ul>
+    </nav>
+    <main>
+        <selection id="ativos">
+            <h2>Inventário de Ativos de TI</h2>
+            <article>
+                <form>
+                    <fieldset>
+                        <legend>Cadastro Técnico de Dispositivos</legend>
+                        <p>
+                            <label for="host">Nome do Host:</label>
+                            <input type="text"id="host" name="host"required>
+                        </p>
+
+                        <p>
+                             <label for="ip">Endereço IP(IPv4):</label>
+                            <input type="text"id="ip" name="ip"pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"placeholder="192.168.0.1">
+                            </p>
+
+                            <p>
+                                <label for="ram">Memória RAM (GB):</label>
+                                <input type="number"id="ram"name="ram" min="1" max="512">
+                          </p>
+                          <p>
+                            <label for="fabricante">Fabricante:</label>
+                            <input list="marcas" id="fabricante" name="fabricante">
+                            <datalist id="marcas">
+                                <option value="Dell">
+                                <option value="HP">
+                                <option value="Cisco">
+                            </datalist>
+                        </p>
+
+                        <p>
+                            <label for="sistema">Sistema Operacional:</label>
+                            <select id="sistema" name="sistema">
+                                <optgroup label="Grupo Linux">
+                                    <option value="ubuntu">Ubuntu Server</option>
+                                    <option value="debian">Debian</option>
+
+                                </optgroup>
+                                <optgroup label="Grupo Windows">
+                                    <option value="win10">Windows 10</option>
+                                    <option value="win_srv">Windows Server</option>
+                                </optgroup>
+                                </select>
+                        </p>
+                     
+                    </fieldset>
+                </form>
+            </article>
+        </selection>
+        <section id="rede">
+            <h2>Planejamento de Rede</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Setor</th>
+                        <th>Vlan</th>
+                        <th>Faixa de IP</th>
+                    </tr>
+                </thead>        
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Adiministrativo</td>
+                        <td>Vlan 10</td>
+                        <td>192.168.20.0/24</td>
+                    </tr>
+                    <tr>
+                        <td>Vlan 20</td>
+                        <td>192.168.20.0/24</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Status da Rede:<mark>Operacional</mark></td>
+                    </tr>
+                </tfoot>
+                </table>
+                <figure>
+                    <img src="imagem\Diagrama de Topologia Estrela da Rede Local.jpg">
+                    <figcaption>Figura 1: Topologia Lógica da RedeDepartamental.</figcaption>
+                </figure>
+        </section>
+     <section id="logs">
+            <h2>Documentação de Código e Status</h2>
+            <article>
+                <h3>Script de Diagnóstico</h3>
+                <pre><code>
+# Comando de verificação de conexão
+ping -c 4 <mark>8.8.8.8</mark>
+echo "Teste de <abbr title="Domain Name System">DNS</abbr> concluído."
+                </code></pre>
+                
+                <p>Para salvar o log, pressione <kbd>Ctrl</kbd> + <kbd>S</kbd>.</p>
+                <p>Saída do Terminal: <samp>Erro: Host de destino inacessível.</samp></p>
+
+                <h3>Monitoramento de Recursos</h3>
+                <p>Uso de CPU: <progress value="65" max="100">65%</progress></p>
+                <p>Uso de Disco: <meter value="0.8" min="0" max="1" low="0.3" high="0.7" optimum="0.5">80%</meter></p>
+            </article>
+
+            <article id="ajuda">
+                <h3>FAQ - Perguntas Frequentes</h3>
+                <details>
+                    <summary>Como resetar o servidor <abbr title="Dynamic Host Configuration Protocol">DHCP</abbr>?</summary>
+                    <p>Execute o comando <code>sudo service isc-dhcp-server restart</code> no terminal.</p>
+                </details>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Avisos Críticos</h3>
+        <p>Atenção: A manutenção da <abbr title="Local Area Network">LAN</abbr> ocorrerá no próximo domingo.</p>
+    </aside>
+
+    <footer>
+        <p> &copy; 2026 - Todos os direitos reservados.</p>
+        <p>Data do relatório: <time datetime="2026-04-23">23 de Abril de 2026</time></p>
+        <p><a href="#topo">Retornar ao Topo</a></p>
+    </footer>
+
+</body>
+</html>
+
